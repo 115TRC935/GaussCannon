@@ -5,10 +5,7 @@ import pandas as pd
 from scipy.interpolate import griddata, make_interp_spline
 from scipy.ndimage import gaussian_filter
 from scipy.signal import savgol_filter
-from mpl_toolkits.mplot3d import Axes3D
-import os
-from matplotlib.colors import LogNorm
-from matplotlib import cm 
+from matplotlib.colors import LogNorm,cm
 
 def cargar_datos():
     """Carga los datos desde CSV"""
@@ -153,7 +150,6 @@ class VisualizadorGraficos:
         except:
             pass  # Si falla el suavizado
 
-    
     def crear_fig_resistencia(self):
         """Gráfico 2: Velocidad vs Resistencia por tipo de amortiguamiento"""
         ax = self.fig.add_subplot(111)
@@ -447,7 +443,6 @@ class VisualizadorGraficos:
                   ha='center', va='center', fontsize=10,
                   bbox=dict(boxstyle="round,pad=0.3", fc="yellow", alpha=0.3))
       
-
     def crear_fig_nucleo(self):
         """Gráfico 4: Velocidad máxima vs d_nucleo"""
         ax = self.fig.add_subplot(111)

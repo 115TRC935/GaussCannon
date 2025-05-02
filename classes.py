@@ -188,7 +188,7 @@ else:
     l_bobina_np = parametros_np[:, 4]
     resistencia_np = parametros_np[:, 5]
     tipo_amort_np = parametros_np[:, 6]
-    pass
+pass
 
 # Crear DataFrame con los resultados
 df = pd.DataFrame({
@@ -349,42 +349,3 @@ ax4.legend()
 
 plt.tight_layout()
 plt.show()
-
-# # --- Gráfico 2D: Velocidad vs Vueltas ---
-# plt.figure(figsize=(8, 5))
-# plt.scatter(vueltas_np, v_finales_np, alpha=0.6, c=v_finales_np, cmap='viridis')
-# plt.xlabel("Número de vueltas")
-# plt.ylabel("Velocidad final (m/s)")
-# plt.title("Velocidad final vs. Vueltas")
-# plt.colorbar(label="Velocidad final [m/s]")
-# plt.grid(True)
-# plt.tight_layout()
-# plt.show()
-
-# # --- Gráfico de amortiguamiento ---
-# plt.figure(figsize=(9, 6))
-# colores = np.array(['blue', 'green', 'red'])[tipo_amort_np.astype(int)]
-# categorias = ['Subamortiguado', 'Crítico', 'Sobreamortiguado']
-# handles = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=c, markersize=10) 
-#         for c in ['blue', 'green', 'red']]
-
-# plt.scatter(resistencia_np, v_finales_np, c=colores, alpha=0.7)
-# plt.xlabel("Resistencia [Ω]")
-# plt.ylabel("Velocidad final [m/s]")
-# plt.title("Velocidad vs Resistencia por tipo de amortiguamiento")
-# plt.legend(handles, categorias, title="Tipo amortiguamiento")
-# plt.grid(True)
-# plt.tight_layout()
-# plt.show()
-
-# # --- Gráfico 3D opcional ---
-# fig = plt.figure(figsize=(9, 6))
-# ax = fig.add_subplot(111, projection='3d')
-# p = ax.scatter(vueltas_np, d_hilo_np, v_finales_np, c=v_finales_np, cmap='plasma', alpha=0.7)
-# ax.set_xlabel("Vueltas")
-# ax.set_ylabel("Diámetro de hilo (m)")
-# ax.set_zlabel("Velocidad final (m/s)")
-# ax.set_title("Velocidad vs Vueltas y d_hilo")
-# fig.colorbar(p, ax=ax, label="Velocidad final [m/s]")
-# plt.tight_layout()
-# plt.show()
