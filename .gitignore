@@ -14,3 +14,13 @@ Thumbs.db
 # Archivos de configuración del editor
 .vscode/
 .idea/
+
+# Archivos de resultados y datos pesados
+resultados_simulacion.csv
+*.csv
+*.npz
+*.npy
+
+# Cachés y salidas de simulación
+.src/simulation_caché/
+.src/superficie3d_interactiva.html
