@@ -7,6 +7,7 @@ import time
 import pandas as pd
 
 csv_path = ".data/resultados_simulacion.csv"
+
 def simulador():
     # --- Constantes físicas ---
     mu0 = 4 * np.pi * 1e-7
